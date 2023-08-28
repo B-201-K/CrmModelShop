@@ -131,6 +131,7 @@
             this.Controls.Add(this.productNameLabel);
             this.Name = "ProductForm";
             this.Text = "ProductForm";
+            this.Load += new System.EventHandler(this.ProductForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productCostTextBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityTextBox)).EndInit();
             this.ResumeLayout(false);

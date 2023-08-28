@@ -9,7 +9,7 @@ namespace CrmUI
         public Main()
         {
             InitializeComponent();
-            db= new CrmContext();
+            db = new CrmContext();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -19,25 +19,25 @@ namespace CrmUI
 
         private void productToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var catalogProduct = new Catalog<Product>(db.Products);
+            var catalogProduct = new Catalog<Product>(db.Products, db);
             catalogProduct.Show();
         }
 
         private void sellerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var catalogSeller = new Catalog<Seller>(db.Sellers);
+            var catalogSeller = new Catalog<Seller>(db.Sellers, db);
             catalogSeller.Show();
         }
 
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var catalogCustomer = new Catalog<Customer>(db.Customers);
+            var catalogCustomer = new Catalog<Customer>(db.Customers, db);
             catalogCustomer.Show();
         }
 
         private void chequeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var catalogCheque = new Catalog<Cheque>(db.Cheques);
+            var catalogCheque = new Catalog<Cheque>(db.Cheques, db);
             catalogCheque.Show();
         }
 

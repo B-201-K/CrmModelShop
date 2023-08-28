@@ -13,22 +13,34 @@ namespace CrmUI
 {
     public partial class ProductForm : Form
     {
-       public Product Product { get; set; } 
+        public Product Product { get; set; }
         public ProductForm()
         {
             InitializeComponent();
         }
+        public ProductForm(Product product) : this()
+        {
+            Product = product;
+            productNameTextBox.Text = Product.Name;
+            productCostTextBox.Value = Product.Price;
+            quantityTextBox.Value = Product.Count;
+        }
 
         private void resultProductButton_Click(object sender, EventArgs e)
         {
-            Product = new Product
-            {
-                Name = productNameTextBox.Text,
-                Price = productCostTextBox.Value,
-                Count = Convert.ToInt32(quantityTextBox.Value)
-            };
+            var p = Product ?? new Product();
+            p.Name = productNameTextBox.Text;
+            p.Price = productCostTextBox.Value;
+            p.Count = Convert.ToInt32(quantityTextBox.Value);
+
+
             Close();
-        
+
+        }
+
+        private void ProductForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

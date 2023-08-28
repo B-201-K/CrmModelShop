@@ -14,22 +14,29 @@ namespace CrmUI
     public partial class CustomerForm : Form
     {
         public Customer Customer { get; set; }
+
         public CustomerForm()
         {
             InitializeComponent();
         }
 
+        public CustomerForm(Customer customer) : this()
+        {
+            Customer = customer;
+            enterNameTextBox.Text = customer.Name;
+        }
+
         private void CustomerForm_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void sellerResultButton_Click(object sender, EventArgs e)
         {
-            Customer = new Customer()
-            {
-                Name = enterNameTextBox.Text
-            };
+            var c = Customer ?? new Customer();
+
+            c.Name = enterNameTextBox.Text;
+
             Close();
         }
     }
