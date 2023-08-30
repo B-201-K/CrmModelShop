@@ -34,10 +34,13 @@ namespace CrmBL.Migrations
                         .HasColumnType("integer");
 
                     b.Property<DateTime>("DateOfCreation")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<int>("SellerId")
                         .HasColumnType("integer");
+
+                    b.Property<decimal>("TotalSumm")
+                        .HasColumnType("numeric");
 
                     b.HasKey("ChequeId");
 

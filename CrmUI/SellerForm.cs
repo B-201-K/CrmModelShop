@@ -27,8 +27,8 @@ namespace CrmUI
 
         private void sellerResultButton_Click(object sender, EventArgs e)
         {
-            var s = Seller ?? new Seller();
-            s.Name = sellerTextBox.Text;
+            Seller = Seller ?? new Seller();
+            Seller.Name = sellerTextBox.Text;
             Close();
         }
 

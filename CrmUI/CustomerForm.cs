@@ -33,9 +33,9 @@ namespace CrmUI
 
         private void sellerResultButton_Click(object sender, EventArgs e)
         {
-            var c = Customer ?? new Customer();
+            Customer = Customer ?? new Customer();
 
-            c.Name = enterNameTextBox.Text;
+            Customer.Name = enterNameTextBox.Text;
 
             Close();
         }

@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CrmBL.Migrations
 {
     /// <inheritdoc />
-    public partial class Initialization : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -61,7 +61,8 @@ namespace CrmBL.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     CustomerId = table.Column<int>(type: "integer", nullable: false),
                     SellerId = table.Column<int>(type: "integer", nullable: false),
-                    DateOfCreation = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    DateOfCreation = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    TotalSumm = table.Column<decimal>(type: "numeric", nullable: false)
                 },
                 constraints: table =>
                 {

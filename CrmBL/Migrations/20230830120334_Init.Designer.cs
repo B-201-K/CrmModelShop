@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CrmBL.Migrations
 {
     [DbContext(typeof(CrmContext))]
-    [Migration("20230828064849_Initialization")]
-    partial class Initialization
+    [Migration("20230830120334_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,10 +37,13 @@ namespace CrmBL.Migrations
                         .HasColumnType("integer");
 
                     b.Property<DateTime>("DateOfCreation")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<int>("SellerId")
                         .HasColumnType("integer");
+
+                    b.Property<decimal>("TotalSumm")
+                        .HasColumnType("numeric");
 
                     b.HasKey("ChequeId");
 

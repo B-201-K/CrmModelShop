@@ -54,14 +54,15 @@ namespace CrmUI
 
         private void CashDesk_CheckClosed(object? sender, Cheque e)
         {
-
-            NumericBox.Invoke((Action)delegate
+            if (!NumericBox.IsDisposed)
             {
-                NumericBox.Value += e.TotalSumm;
-                QueueLength.Value = cashDesk.Count;
-                LeaveCustomersCount.Text = cashDesk.ExitCustomer.ToString();
-            });
-
+                NumericBox.Invoke((Action)delegate
+                {
+                    NumericBox.Value += e.TotalSumm;
+                    QueueLength.Value = cashDesk.Count;
+                    LeaveCustomersCount.Text = cashDesk.ExitCustomer.ToString();
+                });
+            }
         }
     }
 }

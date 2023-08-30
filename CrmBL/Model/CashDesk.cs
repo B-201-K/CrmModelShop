@@ -19,13 +19,14 @@ namespace CrmBL.Model
         public int Count => CustomersQueue.Count;
 
         public event EventHandler<Cheque> ChequeClosed;
-        public CashDesk(int number, Seller seller)
+        public CashDesk(int number, Seller seller, CrmContext db)
         {
             Number = number;
             Seller = seller;
             CustomersQueue = new Queue<Cart>();
             IsModel = true;
             MaxQueueLength= 10;
+            this.db = db?? new CrmContext();
         }
 
         public void Enqueue(Cart cart)
