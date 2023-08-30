@@ -46,7 +46,7 @@ namespace CrmBL.Model
                     Name = GetRandomText(),
                 };
                 Sellers.Add(seller);
-                Sellers.Add(seller);
+                result.Add(seller);
             }
             return result;
         }

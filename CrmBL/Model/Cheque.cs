@@ -14,6 +14,7 @@ public class Cheque
         public virtual ICollection<Sell> Sells { get; set; }
 
         public DateTime DateOfCreation { get; set; }
+        public decimal TotalSumm { get; set; }
 
         public override string ToString()
         {

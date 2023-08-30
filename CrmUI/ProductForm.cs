@@ -20,7 +20,7 @@ namespace CrmUI
         }
         public ProductForm(Product product) : this()
         {
-            Product = product;
+            Product = product?? new Product();
             productNameTextBox.Text = Product.Name;
             productCostTextBox.Value = Product.Price;
             quantityTextBox.Value = Product.Count;
@@ -28,10 +28,10 @@ namespace CrmUI
 
         private void resultProductButton_Click(object sender, EventArgs e)
         {
-            var p = Product ?? new Product();
-            p.Name = productNameTextBox.Text;
-            p.Price = productCostTextBox.Value;
-            p.Count = Convert.ToInt32(quantityTextBox.Value);
+            Product = Product ?? new Product();
+            Product.Name = productNameTextBox.Text;
+            Product.Price = productCostTextBox.Value;
+            Product.Count = Convert.ToInt32(quantityTextBox.Value);
 
 
             Close();

@@ -37,13 +37,15 @@
             this.sellerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sellerAddToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.chequeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripMain
             // 
             this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.сущностиToolStripMenuItem});
+            this.сущностиToolStripMenuItem,
+            this.modelToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
             this.menuStripMain.Size = new System.Drawing.Size(800, 24);
@@ -73,7 +75,7 @@
             // productAddToolStripMenuItem
             // 
             this.productAddToolStripMenuItem.Name = "productAddToolStripMenuItem";
-            this.productAddToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productAddToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.productAddToolStripMenuItem.Text = "Добавить";
             this.productAddToolStripMenuItem.Click += new System.EventHandler(this.productAddToolStripMenuItem_Click);
             // 
@@ -105,7 +107,7 @@
             // sellerAddToolStripMenuItem2
             // 
             this.sellerAddToolStripMenuItem2.Name = "sellerAddToolStripMenuItem2";
-            this.sellerAddToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.sellerAddToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
             this.sellerAddToolStripMenuItem2.Text = "Добавить";
             this.sellerAddToolStripMenuItem2.Click += new System.EventHandler(this.sellerAddToolStripMenuItem2_Click);
             // 
@@ -115,6 +117,13 @@
             this.chequeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.chequeToolStripMenuItem.Text = "Чек";
             this.chequeToolStripMenuItem.Click += new System.EventHandler(this.chequeToolStripMenuItem_Click);
+            // 
+            // modelToolStripMenuItem
+            // 
+            this.modelToolStripMenuItem.Name = "modelToolStripMenuItem";
+            this.modelToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.modelToolStripMenuItem.Text = "Моделирование";
+            this.modelToolStripMenuItem.Click += new System.EventHandler(this.modelToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -144,5 +153,6 @@
         private ToolStripMenuItem productAddToolStripMenuItem;
         private ToolStripMenuItem customerAddToolStripMenuItem1;
         private ToolStripMenuItem sellerAddToolStripMenuItem2;
+        private ToolStripMenuItem modelToolStripMenuItem;
     }
 }
